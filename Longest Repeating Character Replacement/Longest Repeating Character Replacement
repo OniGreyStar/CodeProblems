@@ -1,4 +1,5 @@
-  int[] count = new int[26];
+ public int characterReplacement(String s, int k) {
+        int[] count = new int[26];
         int maxCount =0,start =0,maxLength =0;
         
         for(int end =0;end<s.length();end++){
@@ -10,3 +11,4 @@
             maxLength = Math.max(maxLength,end - start +1);
         }
         return  maxLength;
+    }
