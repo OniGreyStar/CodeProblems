@@ -1,0 +1,24 @@
+public int[] solution(int[] A, int K) {
+        if(A.length == 0){
+            return new int[]{};
+        }
+        K = K % A.length;
+        reverse(A,0,A.length-1);
+        reverse(A,0,K-1);
+        reverse(A,K,A.length-1);
+
+
+        return A;
+
+    }
+
+    public void reverse(int[] nums,int left,int right){
+        while(left < right){
+            int temp = nums[left];
+            nums[left] = nums[right];
+            nums[right] = temp;
+            left++;
+            right--;
+        }
+
+    }
